@@ -1,0 +1,21 @@
+{% extends 'pages/base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+  <div class="alert alert-success" role="alert">
+    {{ message }}
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ product.name }}</h5>
+      <p class="card-text">Price: {{ product.price }}</p>
+      {% if product.description %}
+      <p class="card-text">Description: {{ product.description }}</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}
